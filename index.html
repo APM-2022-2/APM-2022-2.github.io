@@ -812,7 +812,7 @@
             </div>
         </div>
         <!-- Project_modules item 3 modal popup-->
-        <div class="Project_modules-modal modal fade" id="Project_modulesModal3" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="Project_modules-modal modal fade" id="Project_modulesModal3" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
@@ -824,8 +824,124 @@
                                     <h2 class="text-uppercase">Celda Robótica</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/Project_modules/3.jpg" alt="..." />
-                                    <div  style="text-align: left;">
-                                        <p>  Daniel  Robot</p>
+                                    <div  style="text-align: justify;">
+                                        <p>  Según la fundación de prevencion de riesgos laborales, el peso máximo que una persona puede cargar es de 
+                                            25 Kg para el sexo masculino y 12.5 para el femenino, en este caso aunque se manejan pesos de máximo 3.5 Kg es 
+                                            suficiente para considerarlo como una carga y por lo tanto es necesario que el trabajador tenga en cuenta lo riesgos 
+                                            asociados a su transporte. A largo plazo está demostrado que el tratamiento de cargas de manera indebida puede provocar:</p>
+                                        <p> <li> Fatiga física. </li> </p>
+                                        <p> <li> Lesiones que se pueden producir de una forma inmediata. </li> </p>
+                                        <p> <li> Acumulación de pequeños traumatismos, aparentemente sin importancia, hasta producir lesiones crónicas. </li> </p>
+                                        <p>Por esta razón el Instituto Nacional de Seguridad e Higiene en el Trabajo de España designó las disposiciones mínimas de 
+                                            seguridad y salud relativas a la manipulación manual de cargas que entrañe riesgos, en particular dorsolumbares , para los 
+                                            trabajadores. En este se habla de los diferentes puntos a analizar en los riesgos asociados al transporte de cargas, el 
+                                            objeto de interés para esta situación es la exigencia de la actividad la cual enuncia lo siguiente:</p>
+                                        <p> “La actividad puede entrañar riesgo, en particular dorsolumbar, cuando implique una o varias de las exigencias siguientes:</p>
+                                        <p> <li> Esfuerzos físicos demasiado frecuentes o prolongados en los que intervenga en particular la columna vertebral. </li> </p>
+                                        <p> <li> Período insuficiente de reposo fisiológico o de recuperación. </li> </p>
+                                        <p> <li> Distancias demasiado grandes de elevación, descenso o transporte. </li> </p>
+                                        <p> <li> Ritmo impuesto por un proceso que el trabajador no pueda modular. ” REAL DECRETO 487/1997, de 14 de abril, sobre disposiciones mínimas de seguridad y
+                                            salud relativas a la manipulación manual de cargas que entrañe riesgos, en particular
+                                            dorsolumbares, para los trabajadores. BOE nº 97 23-04-1997 </li> </p>
+                                        <p>Como empresa para evitar daños físicos a los trabajadores en un futuro, es importante capacitar e informar 
+                                            sobre los diferentes tipos de riesgos presentes en este tipo de trabajo y cómo evitarlos, por ende se puede 
+                                            presentar la opción de implementar una celda robotizada que evite lesiones en los trabajadores.
+                                        </p>
+                                        <p>Por otro lado en cuanto a la eficiencia del robot se puede realizar un análisis de fatiga de una persona que tiene un turno de 9 horas, 
+                                            debido al cansancio el trabajador va a disminuir su rendimiento a medida que se acerca su final de jornada, cosa que con el robot no es 
+                                            necesario a tener en cuenta, dado que este puede mantener un funcionamiento continuo y con el debido mantenimiento se puede ampliar su vida útil.</p>
+                                        <img  src="assets/img/Img_Celda_Robotica/Layout1.png" alt="..." />
+                                        <p>El modelo anterior es la disposición que mejor optimiza el espacio teniendo en cuenta los puntos alcanzables por el robot. Se tiene un flujo de entrada de 
+                                            material que se muestra en el software Factory IO como una única banda y de la misma manera se presenta aquí como ingresa a la celda a la celda robótica y se 
+                                            ubica a un costado del robot. la interacción con el personal según estas ubicaciones se espera que el único ingreso de personal sea para el mantenimiento del 
+                                            robot y de las bandas en la zona dentro del celda, como se puede evidenciar las actividades restantes se ejecutan desde una máquina como un montacarga o en zonas 
+                                            aledañas a la celda como es el caso del controlador y el tablero de control. Por otro lado, teniendo en cuenta las medidas de seguridad funcional se implementan 
+                                            botones de parada de emergencia, cortinas fotoeléctricas, una baliza indicadora y aunque en el modelo de RobotStudio no se muestre, es necesario demarcar en el 
+                                            suelo las áreas de trabajo del robot y las ubicaciones de los elementos.</p>
+                                        <p>El manipulador seleccionado para la labor de pick and place fue un IRB 2600 12/1.85, lo primero que llama la atención en esta escogencia sl el peso máximo que puede 
+                                            cargar, dado que la caja de mayor tamaño manejada en el proceso pesa 3.5 Kg se puede considerar un sobredimensionamiento del proceso, sin embargo, para tener una 
+                                            mayor flexibilidad de la celda como buena práctica se tienen en cuenta posibles cambios en el peso de los productos, de esta maner si algún momento la empresa 
+                                            decide enviar cajas con una masa mayor el robot está en la capacidad de realizar la tarea. De la misma forma se escoge el actuador que permita realizar las 
+                                            acciones requeridas(Robot-ready Vacuum Lifter McMasterr6406N115), con estos dos elementos se procede a realizar  el diseño de la celda teniendo como resultado el 
+                                            siguiente modelo.</p>
+                                            <div style="text-align: center;"><img  src="assets/img/Img_Celda_Robotica/Celda.png" alt="..." /></div>
+                                        <p>En general se compone por el robot, su actuador, el controlador, banda transportadora, los pallets y  elementos de seguridad (previamente mencionados) todos ellos con comportamientos 
+                                            físicos que permitan tener una simulación más acertada. Su programación se basa en el uso de “Smart component” en elementos como la banda transportadora y el actuador, ya 
+                                            que estos presentan acciones diferentes o en agrupación con el desplazamiento. Para iniciar se explicará el desarrollo del actuador del robot, como base se crea una herramienta el 
+                                            RobotStudio que posteriormente se calibra para que se establezca como el nuevo TCP del robot, realizado esto ahora se trabaja con el componente inteligente llegando a la siguiente lógica, 
+                                            la cual a partir de un sensor y las acciones de agarrar y soltar permiten que el actuador haga el pick de cualquiera de los tres tipos de caja.</p>
+                                            <div style="text-align: center;"><img  src="assets/img/Img_Celda_Robotica/Ventosa.png" width="800" height="500" alt="..." /></div>
+                                        <p>Como primer acercamiento a este tipo de lógica es interesante notar que se maneja de tal forma que se asemeja a una programación en diagrama de bloques como se 
+                                            utiliza en programas como SimuLink donde cada bloque es un función y esta se relaciona con el resto por medio de conexiones. Siguiendo esta lógica se establece 
+                                            el diagrama que permite el funcionamiento de la banda transportadora, el reto en este caso es que la banda por si misma tiene que crear cada uno de los tipo de 
+                                            caja y realizar la acción correspondiente a un conveyor, su lógica se ve de esta manera.</p>   
+                                        <div style="text-align: center;"><img  src="assets/img/Img_Celda_Robotica/Conveyor.png" width="700" height="500"  alt="..." /></div>
+                                        <p>El tipo de entrada es una señal digital que corresponde  a la entrada de las cajas dependiendo el tamaño que se solicite, como se puede observar en en este caso 
+                                            se tiene un bloque de “PhysicsControl” el cual permite modificar parámetros de velocidad que en este caso está graduada a 1000 mm/s de acuerdo al resto de análisis 
+                                            en los demás programas. Otro aspecto importante a tener en cuenta es la clasificación de las cajas, dado que dependiendo de sus dimensiones se realizará un 
+                                            trayectoria diferente, es por esta razón que para el correcto funcionamiento de la simulación se utilizan tres sensores que determinan si una caja es grande, 
+                                            mediana o pequeña, aunque, es necesario comentar que este procedimiento es solo para el modelo simulado, dado que en la realidad se tiene un proceso de obtención 
+                                            de información por medio de un scanner lo cual permite omitir el uso de los sensores.</p> 
+                                        <img  src="assets/img/Img_Celda_Robotica/Con1Rob.png" width="400" height="250" alt="..." />
+                                        <img  src="assets/img/Img_Celda_Robotica/Con2Rob.png" width="400" height="250" alt="..." />
+                                        <p>Por último en cuanto a  configuración, se tiene la lógica de la estación, la cual establece las relaciones de los componentes inteligentes con el controlador del 
+                                            robot, evidenciadas por medio de las señales de salida y entrada.</p>
+                                        <div style="text-align: center;"><img  src="assets/img/Img_Celda_Robotica/Station.png" alt="..." /></div>
+                                        <p>Con todos los componentes configurados se realizan las trayectorias que el robot debe seguir para cada caja con aproximaciones de manera vertical como buena 
+                                            práctica. En la simulación se tiene que por defecto se realiza una única vez se utilizan métodos de programación en RAPID que permiten crear un loop para que 
+                                            se puedan crear las cajas necesarias para poder  visualizar el proceso y más importante medir tiempos de proceso para el las otras simulaciones.</p>
+                                        <div style="text-align: center;"><img  src="assets/img/Img_Celda_Robotica/Rapid.png" width="800" height="500" alt="..." /></div>
+                                        <p>Riesgos Existentes:</p>
+                                        <div style="text-align: center;"><img  src="assets/img/Img_Celda_Robotica/Riesgos.PNG" width="400" height="250" alt="..." /></div>   
+                                        <p>Riesgos Existentes y Evaluación del mismo según ABB</p>
+                                        <ul>
+                                            <li><b>Mecánicos:</b></li>
+                                              <ul>
+                                                <li>Aplastamiento:</li>
+                                                  <ul>
+                                                    <li>Movimientos (normales o imprevistos) de cualquier parte del brazo del robot (incluyendo su espalda) G1,F1,P1 <b>Riesgo A (Muy Bajo)</b></li>
+                                                    <li>Movimiento no deseados del robot o sus partes durante las operaciones de manipulación G2, F1,P1 <b>Riesgo C (Medio)</b></li>
+                                                  </ul> 
+                                                <li>Enredo</li>
+                                                  <ul>                                                  
+                                                    <li>Ropa holgada, pelo largo de un trabajador de mantenimiento G2,F1,P1  <b>Riesgo C (Medio)</b></li>                                                    
+                                                  </ul>
+                                                <li>Impacto</li>
+                                                  <ul>                                                  
+                                                    <li>Expulsión o desprendimiento de los materiales y productos de las cajas G1,F2,P2  <b>Riesgo C (Medio)</b></li> 
+                                                    <li>Golpe entre el brazo del robot y cualquier objeto fijo G1, F2,P1  <b>Riesgo B (Bajo)</b></li>   
+                                                    <li>Golpe entre el las cajas y cualquier objeto fijo (barreras, etc.) G1,F2,P1  <b>Riesgo B (Bajo)</b></li> 
+                                                    <li>Fallo en las ventosas (separación) G1,F2,P2  <b>Riesgo C (Medio)</b></li>                                                
+                                                  </ul>                   
+                                              </ul>
+                                            <li><b>Eléctricos:</b></li>
+                                                <ul>
+                                                    <li>Choque eléctrico:</li>
+                                                        <ul>
+                                                            <li>Contacto con componentes cargados o conexiones G2, F1, P1  <b>Riesgo C (Medio)</b></li>  
+                                                            <li>Confusión entre los varios voltajes de un sistema G2, F2, P1  <b>Riesgo D (Alto)</b></li> 
+                                                        </ul>
+                                                </ul>
+                                            <li><b>Ergonómicos:</b></li>
+                                                <ul>
+                                                    <li>Errores humanos:</li>
+                                                        <ul>
+                                                            <li>Ubicación inadecuada de los controles en la celda G1, F2, P2  <b>Riesgo C (Medio)</b></li>  
+                                                            <li>Difícil alcance, exposición a peligros adicionales debido a una ubicación inadecuada de los componentes que 
+                                                                requieren acceso para acciones anticipadas de mantenimiento(solución de problemas, reparación, ajustes), 
+                                                                los operarios hacen “piruetas” y se ubican en posiciones peligrosas tratando de alcanzar los componentes. G2, F2, P1  <b>Riesgo D (Alto)</b></li> 
+                                                        </ul>
+                                                </ul>
+                                            <li><b>Combinación:</b></li>
+                                                <ul>
+                                                    <li>Restauración del suministro de energía después de una interrupción</li>
+                                                        <ul>
+                                                            <li>Se ha determinado una persona para poner en marcha el robot, pero no se contempla que está acción la pueda realizar otra persona G1, F2, P2   <b>Riesgo C (Medio)</b></li>                                                       
+                                                        </ul>
+                                                </ul>
+                                        </ul>                                            
+                                                 
+
                                     </div>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
