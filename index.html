@@ -640,11 +640,9 @@
                                 <div class="modal-body">
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Cronograma</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <br>
+                                    <p style="text-align: justify;">La organización de tareas y gran parte de la comunicación que tenía el equipo se realizó por medio de la plataforma GoodDay, la cual nos permitió establecer una lista de pendientes y organizarlos por fecha de inicio y culminación, además de esto cada uno de los líderes de los desarrollos que había por gestionar podía comunicarles a sus compañeros las tareas que tenían que realizar, noticiándoles por correo. Asimismo, se puede ver con facilidad el estado de las tareas que tiene el equipo, clasificándolas en no empezado, en proceso, cerrada y entre otros. A continuación, se presenta el diagrama de Gannt de que usaba el equipo.</p>
                                     <iframe src="https://share.goodday.work/afb003c1-7950-40d1-acbf-eaf716267bb0" width="100%" height="700px"></iframe>
-                                    <div  style="text-align: left;">
-                                        <p>  Giovanni  Crono</p>
-                                    </div>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Cerrar módulo
@@ -715,7 +713,7 @@
                                         </li>
                                         <li>
                                             <strong>Giovanni Páez:</strong>
-                                            Photography
+                                            El proyecto me ayudo a desarrollar mis habilidades de forma práctica, dándome cuenta que fomento de gran forma mis habilidades para organizar los trabajos con mis compañeros, plantear estrategias para afrontar las actividades y aprender a trabajar en equipo. Además de esto fue de gran utilidad aprender las herramientas para poder tener métricas de la productividad de las plantas, y poder llegar a simularlas en un entorno potente como lo es Tecnomatix Plan Simulator, me ayudó a desarrollar mis habilidades para ensamblar grandes componentes CAD, realizar comisionamiento, y escribir código HTML, y finalmente el cálculo de indicadores.
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -741,13 +739,32 @@
                                 <div class="modal-body">
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Problema a automatizar</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <iframe src="https://docs.google.com/spreadsheets/d/1ENCaBvJFjwVxo5AIwdRxXUc1pqcRcloe6ITzJFASYY8/edit?usp=sharing" width="100%" height="700px"></iframe>
-                                    <div  style="text-align: left;">
-                                        <p>  Giovanni  Problema a automatizar</p>
+                                    <p class="item-intro text-muted">Tecnomatix Plant Simulator.</p>
+                                    <div  style="text-align: justify;">
+                                        <p>  Nos encontramos con la problemática de plantear por nosotros mismos escenarios que mejor se acomodaran a una planta de distribución de paquetes hecha de forma manual, en este proceso se estableció como primera instancia las zonas que componían la planta, es decir: donde se almacenan de cajas, el producto, el área de despacho y finalmente la de sistema, donde cada uno de los trabajadores tenía que dirigirse para saber las entregas. </p>
+                                        <br>
+                                        <p> De esto se comenzó a contrur el archivo en Tecnomatix Plant Simulator donde no era necesario representar cada una de las areas de la planta más si es importante representar aquellas en las que se realiza el traabajo operativo. En la siguiente imagen mostramos cada una de las etapas necesarias para poer representar el funcionamiento operativo dentro de la planta antes de automatizar.</p>
                                     </div>
-                                    <iframe width="420" height="345" src="https://youtu.be/Lh5OLsXFl1k">
-                                    </iframe>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/Project_modules/Planta.png" alt="..." />
+                                    <div  style="text-align: justify;">
+                                        <p> En el área de transporte al almacén, simulamos dos operarios que transportan un gran grupo de cajas para ser organizadas en los rack , para esto usa una carretilla que en este caso es representada como un contenedor o una caja, capaz de almacenar 6 Mus, donde hay un operario encargado de montarlas y organizarlas en la carretilla  con un tiempo promedio de 3s ,y otro  encargado de transportarlas al almacén y organizarlas por tamaños, distribuido para que le queda cerca a cada uno de los 3 trabajos que hacen el despacho, esto con un tiempo promedio de ciclo de 50s sin contar tiempo de caminado.</p>
+                                        <br>
+                                        <p>Finalmente, para en el área de despacho el trabajador tiene que recoger cada una de las cajas de rack y ponerlas dentro de una caja, además de esto tiene tiene que recoger la caja y visualizar la lista de productos, y despacharlas,  para todo esto se estableció un tiempo de ciclo de 4 min, además se estableció la probabilidad de falla para cada estación de ensamblaje, des-ensamblaje, y fuentes de productos y cajas.   En el siguiente video podemos observar el funcionamiento de la planta simulada antes de ser automatizada.</p>
+                                    </div>
+                                    <video  width="100%" controls>
+                                        <source src="Videos/Sin automatizar.mp4" type="video/mp4">
+                                    </video>
+                                    <br>
+                                    <br>
+                                    <p class="item-intro text-muted">Calculo OEE.</p>
+                                    <div  style="text-align: justify;">
+                                        <p> Para el proceso de calculó de los indicadores de desempeño se creo una plantilla donde los tiempos obtenidos en Tecnomatix se plasmaron para calcular secuencialmente una serie de KPIs y finalmente el OEE, a continuación, se muestra dicho calculo. </p>
+
+                                    </div>
+                                    <iframe src="https://docs.google.com/spreadsheets/d/1ENCaBvJFjwVxo5AIwdRxXUc1pqcRcloe6ITzJFASYY8/edit?usp=sharing" width="100%" height="900px"></iframe>
+                                    
+                                    <p class="item-intro text-muted">VSM.</p>
+
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Cerrar módulo
@@ -859,11 +876,34 @@
                                 <div class="modal-body">
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Gestión de producción</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/Project_modules/5.jpg" alt="..." />
-                                    <div  style="text-align: left;">
-                                        <p>  Giovanni  KPIS</p>
+                                    <p class="item-intro text-muted">Simulación Tecnomatix Plant Simulator</p>
+                                    <div  style="text-align: justify;">
+                                        <p>Se realizó un modelo en Tecnomatix que simulara el comportamiento en conjunto con los tiempos de proceso del layout propuesto por el equipo. Para esto se realizo un modelo de fuente que pudiera dispensar 3 tipos diferentes de cajas: la azul; representando la caja grande, la morada; como la caja mediana, y la amarilla; simulando la caja pequeña. De aquí se fue necesario crear el modelo de bandas transportadoras que condujeran a los correspondientes Stacker y DeStaker, que previamente necesitarían el accionamiento de Sorting por medio de sensores.  </p>
+                                        <br>
+                                        <p> El modelo del Stacker se representó como una sección de un cuadro que podía albergar 8 MUs en el eje Z, con un tiempo de proceso por caja de 3S, el cual una vez haya apilado las cajas las transporta ala siguiente almacenador, que representa el movimiento de la pila.  Cuando los 5 Storage están completamente llenos en cada uno de los segmentos de caja, se activa una señal a la fuente para que pare de enviar mercancía, una vez empezado el proceso de despaño, cuando el Stacker detecta que tiene menos del 50% de su capacidad, manda una señal a la fuente para que vuelva a alimentar el almacenamiento. </p>
+                                        <br>
+                                        <p> Para el proceso de despacho, se simuló la orden por medio de una fuente que contiene los registros de los pedidos a lo largo del día, estos con una frecuencia de envió dependiente del tiempo que tarda el robot en realizar el anterior pedido, para simplificar el modelo se utilizó un tiempo promedio de 1’:12’’ de intervalo, generando una señal al DeStacker cuando es hora de mandar la orden. El DeStacker es representado como un storage de 1 en “x”, 1 en “z” y 1 en “y”, de capacidad del almacenamiento, donde los pedidos que lo activan son albergados en una DeliveryTable.</p>
+                                        <br>
+                                        <p> Para el proceso de simular el Pick and Place, se asignó un intervalo de 7 s para cada una de las trayectorias que podía realizar el robot, obteniendo que un solo ciclo de pick and place puede durar 14s. Estas trayectorias constan de recoger una caja y depositarla en cualquiera de los 3 palets que se encuentran a su alrededor. En el siguiente video se ve el funcionamiento de la planta.</p>
                                     </div>
+                                    <video  width="100%" controls>
+                                        <source src="Videos/Automatizada.mp4" type="video/mp4">
+                                    </video>
+
+                                    <div  style="text-align: justify;">
+                                        <p> Finalmente se asignó un porcentaje de falla de 5% para los Drains que simulan los palets, con un tiempo de recuperación de 15s, simulando un estado en que el operario, no alcanza a depositar el palet y el robot tiene que esperar a que sea puesto. Y también se asigno una falla al DeStaker con probabilidad de ocurrencia del 5% con un tiempo de corrección de 1 min, que correspondería al caso que se haya trabado una caja al salir.</p>
+                                    </div>
+                                    <p class="item-intro text-muted">Calculo OEE</p>
+                                    <div  style="text-align: justify;">
+                                        <p>Se realizó el cálculo del OEE a partir de la plantilla creada para la planta sin automatizar, donde fue indispensable las simulaciones de tiempo de falla de los palets y el de satcker, ya que son las que generan un estado de bloqueo  en el robot, o en el caso de la falla del Stacker, un tiempo de espera para obtener la caja y realizar el pick and place, la verdadera potencia del modelo realizado, es que aun que con callas el robot puede generar en las dos jornadas 670 pedidos, si se minimiza la ocurrencia de estas pueden llegar fácilmente a 750 pedidos o hasta un máximo de 800, el robot en estas circunstancias tendría un OEE muy cercano al 100% ya que está totalmente optimizado, apenas termina la rutina de guardar un paquete inmediatamente, ya tiene los siguientes a disposición, teniendo un tiempo espera del 100%, estando siempre disponible el trabajo . En la siguiente tabla se visualiza el proceso del calculo del OEE en la plantilla.</p>
+                                    </div>
+                                    <iframe src="https://docs.google.com/spreadsheets/d/1zmSlGA_Btz5AUCjqCCHeVYUC-_Yan4ByzTyi8PsQpnY/edit?usp=sharing" width="100%" height="700px"></iframe>
+                                    <div  style="text-align: justify;">
+                                        <p>En el siguiente video se muestra un caso de perfecta sincronización entre el robot el Sracker y los palets, que es la situación que toca procurar mantener evitando y trabajando cada vez más en la probabilidad e ocurrencia de estas fallas. </p>
+                                    </div>
+                                    <video  width="100%" controls>
+                                        <source src="Videos/automatizada Pro.mp4" type="video/mp4">
+                                    </video>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Cerrar módulo
